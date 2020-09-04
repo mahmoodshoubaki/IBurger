@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_two"
+    tools:context=".Profile"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="end"
+    android:id="@+id/drawer_layout">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/menu"
+        app:headerLayout="@layout/header"
+        app:itemTextAppearance="@style/custom_text_style"
+        app:menu="@menu/menu"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/back"
+                android:background="@drawable/rounded_red_border"
+                android:layout_margin="10dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/profile"
+                android:letterSpacing="0.3"
+                android:layout_toRightOf="@+id/back"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textAllCaps="true"
+                android:textColor="@android:color/holo_green_dark"
+                android:layout_margin="20dp"/>
+            <ImageView
+                android:id="@+id/nav_controller"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/files_and_folders"
+                android:layout_alignParentRight="true"
+                android:layout_marginVertical="20dp"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_below="@+id/back"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="20dp"
+                android:contentDescription="@string/logo"
+                android:src="@drawable/iburger_logo" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/full_name_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/logo"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/yellow">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/full_name"
+                    android:inputType="text"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phone_number_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/full_name_layout"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/yellow">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phone_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/phone_number"
+                    android:inputType="number"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/email_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/phone_number_layout"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/yellow">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/email"
+                    android:inputType="textEmailAddress"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/location_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/email_layout"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/yellow">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:editable="false"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/location"
+                    android:inputType="text"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/location_layout"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/yellow"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/re_password_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/password_layout"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginVertical="20dp"
+                android:background="@color/yellow"
+                app:passwordToggleEnabled="true">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/re_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:hint="@string/re_password"
+                    android:inputType="textPassword"
+                    android:textAllCaps="true"
+                    android:textColor="@color/dark_gray" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/re_password_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="20dp"
+                android:background="@null"
+                android:text="@string/save"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="@color/orange" />
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

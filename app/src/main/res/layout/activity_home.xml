@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_two"
+    android:fitsSystemWindows="true"
+    tools:context=".Home"
+    tools:openDrawer="end">
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/menu"
+        app:headerLayout="@layout/header"
+        app:itemTextAppearance="@style/custom_text_style"
+        app:menu="@menu/menu" />
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginVertical="20dp"
+                android:src="@drawable/iburger_logo" />
+
+            <ImageView
+                android:id="@+id/nav_controller"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginVertical="20dp"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/files_and_folders"
+                android:layout_alignParentEnd="true" />
+
+
+            <LinearLayout
+                android:id="@+id/choices"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/logo"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10dp">
+
+                    <ImageView
+                        android:id="@+id/burger"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:layout_marginHorizontal="20dp"
+                        android:src="@drawable/fast_food" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.2"
+                        android:textAllCaps="true"
+                        android:text="@string/burger"
+                        android:textStyle="bold"
+                        android:layout_marginVertical="10dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/dark_gray" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="10dp">
+
+                    <ImageView
+                        android:id="@+id/snacks"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@drawable/chicken_bucket" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:letterSpacing="0.2"
+                        android:text="@string/snacks"
+                        android:layout_marginVertical="10dp"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:textColor="@color/dark_gray" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="true"
+        android:text="@string/order_your_favourite_food_now"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:letterSpacing="0.2"
+        android:textStyle="bold"
+        android:layout_marginVertical="10dp"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

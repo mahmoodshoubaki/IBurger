@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu"
+        android:checkableBehavior="single">
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile"/>
+    <item
+        android:id="@+id/burger"
+        android:title="@string/burger" />
+    <item
+        android:id="@+id/snacks"
+        android:title="@string/snacks" />
+    <item
+        android:id="@+id/orders"
+        android:title="@string/orders" />
+    <item
+        android:id="@+id/location"
+        android:title="@string/location" />
+    <item
+        android:id="@+id/logout"
+        android:title="@string/logout"/>
+        <item
+            android:id="@+id/menu_none"
+            android:title=""
+            android:visible="false"/>
+    </group>
+</menu>

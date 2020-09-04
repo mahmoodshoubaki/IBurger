@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">I Burger</string>
+    <string name="email">Email Address</string>
+    <string name="password">Password</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="do_not_have_account">Don\'t have account ? Signup</string>
+    <string name="login">Login</string>
+    <string name="logo">Logo</string>
+    <string name="full_name">full name</string>
+    <string name="phone_number">phone number</string>
+    <string name="location">locations</string>
+    <string name="re_password">Re-password</string>
+    <string name="signup">signup</string>
+    <string name="profile">profile</string>
+    <string name="burger">burger</string>
+    <string name="snacks">snacks</string>
+    <string name="orders">orders</string>
+    <string name="logout">logout</string>
+    <string name="drawer_navigation_open">drawer navigation open</string>
+    <string name="drawer_navigation_close">drawer navigation close</string>
+    <string name="order_your_favourite_food_now">order your favourite food now</string>
+    <string name="save">save</string>
+    <string name="google_place_api_key">AIzaSyDkFilpaZmDEwLkEqZe4C5YvvBR66IMO7E</string>
+    <string name="password_restrictions">password must have: \n" +
+                            "• min 6 characters \n" +
+                            "• min 1 upper case \n" +
+                            "• min 1 lower case\n" +
+                            "• min 1 number</string>
+    <string name="cheese_burger">cheese\nburger</string>
+    <string name="meal">Meal</string>
+    <string name="_0">0</string>
+    <string name="bfr_burger">bfr\nburger</string>
+    <string name="beef_burger">beef\nburger</string>
+    <string name="_7jd">7jd</string>
+    <string name="_6jd">6jd</string>
+    <string name="_5jd">5jd</string>
+    <string name="_4jd">4jd</string>
+    <string name="mash_burger">mash\nburger</string>
+    <string name="_3jd">3jd</string>
+    <string name="shawarma">shawarma</string>
+    <string name="hotdog">hotdog</string>
+    <string name="chrispy">chrispy</string>
+    <string name="faheta">faheta</string>
+    <string name="check">check</string>
+    <string name="order_now">order now</string>
+    <string name="order_confirmed">order\nconfirmed</string>
+    <string name="resturant_phone_number">0795347341</string>
+    <string name="confirm">confirm</string>
+
+</resources>

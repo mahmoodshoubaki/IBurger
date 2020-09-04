@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/done"
+    android:fitsSystemWindows="true"
+    tools:context=".Confirm"
+    tools:openDrawer="end">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/menu"
+        app:headerLayout="@layout/header"
+        app:itemTextAppearance="@style/custom_text_style"
+        app:menu="@menu/menu" />
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/rounded_red_border"
+                        android:src="@drawable/back" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="20dp"
+                        android:layout_toEndOf="@+id/back"
+                        android:layout_toRightOf="@+id/back"
+                        android:letterSpacing="0.3"
+                        android:text="@string/confirm"
+                        android:textAllCaps="true"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textColor="@android:color/holo_green_light" />
+
+                    <ImageView
+                        android:id="@+id/nav_controller"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginVertical="20dp"
+                        android:src="@drawable/files_and_folders" />
+
+                    <LinearLayout
+                        android:layout_width="310dp"
+                        android:layout_height="300dp"
+                        android:background="@drawable/item_three"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:src="@drawable/iburger_logo"
+                            android:layout_marginTop="10dp"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:src="@drawable/confirmation"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/orange"
+                            android:text="@string/order_confirmed"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                            android:textStyle="bold"
+                            android:textAllCaps="true"
+                            android:gravity="center_horizontal"
+                            android:letterSpacing="0.2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

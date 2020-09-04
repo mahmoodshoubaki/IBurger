@@ -1,0 +1,488 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/burger_background"
+    android:fitsSystemWindows="true"
+    tools:context=".Burger"
+    tools:openDrawer="end"
+    android:id="@+id/drawer_layout">
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/menu"
+        app:headerLayout="@layout/header"
+        app:itemTextAppearance="@style/custom_text_style"
+        app:menu="@menu/menu" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbarThumbVertical="@drawable/scrollbar"
+        android:scrollbarTrackHorizontal="@drawable/scrollbar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:background="@drawable/rounded_red_border"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_toEndOf="@+id/back"
+                android:letterSpacing="0.3"
+                android:text="@string/burger"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/orange" />
+
+            <ImageView
+                android:id="@+id/nav_controller"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="10dp"
+                android:src="@drawable/files_and_folders" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cheese_burger_layout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/back"
+                android:layout_margin="10dp">
+
+                <RelativeLayout
+                    android:id="@+id/cheese_burger_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/item_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioGroup
+                        android:id="@+id/cheese_burger_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:checkedButton="@id/cheese_burger"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/cheese_burger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@android:color/holo_green_dark"
+                            android:letterSpacing="0.2"
+                            android:text="@string/cheese_burger"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_5jd"
+                            android:layout_margin="10dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/cheese_burger_meal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="28dp"
+                            android:letterSpacing="0.2"
+                            android:text="@string/meal"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_6jd"
+                            android:layout_marginTop="5dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/cheese_burger_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:text="@string/_0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/plus_minus_container"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/cheese_burger_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/plus" />
+
+                    <ImageView
+                        android:id="@+id/cheese_burger_minus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/minus" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bfr_burger_layout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nav_controller"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="50dp">
+
+                <RelativeLayout
+                    android:id="@+id/bfr_burger_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/item_three"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioGroup
+                        android:id="@+id/bfr_burger_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:checkedButton="@id/bfr_burger"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/bfr_burger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@android:color/holo_green_dark"
+                            android:textAlignment="center"
+                            android:letterSpacing="0.2"
+                            android:text="@string/bfr_burger"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_4jd"
+                            android:layout_margin="10dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/bfr_burger_meal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="28dp"
+                            android:letterSpacing="0.2"
+                            android:text="@string/meal"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_6jd"
+                            android:layout_marginTop="5dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/bfr_burger_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:text="@string/_0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/plus_minus_container"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/bfr_burger_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/plus" />
+
+                    <ImageView
+                        android:id="@+id/bfr_burger_minus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/minus" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/beef_burger_layout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cheese_burger_layout"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="25dp">
+
+                <RelativeLayout
+                    android:id="@+id/beef_burger_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/item_one"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioGroup
+                        android:id="@+id/beef_burger_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:checkedButton="@id/beef_burger"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/beef_burger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:buttonTint="@android:color/holo_green_dark"
+                            android:letterSpacing="0.2"
+                            android:text="@string/beef_burger"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_6jd"
+                            android:layout_margin="10dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/beef_burger_meal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="28dp"
+                            android:letterSpacing="0.2"
+                            android:text="@string/meal"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_7jd"
+                            android:layout_marginTop="5dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/beef_burger_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:text="@string/_0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/plus_minus_container"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/beef_burger_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/plus" />
+
+                    <ImageView
+                        android:id="@+id/beef_burger_minus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/minus" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/mash_burger_layout"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bfr_burger_layout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginVertical="50dp">
+
+                <RelativeLayout
+                    android:id="@+id/mash_burger_relative_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/item_two"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <RadioGroup
+                        android:id="@+id/mash_burger_radio_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:checkedButton="@id/mash_burger"
+                        android:gravity="center">
+
+                        <RadioButton
+                            android:id="@+id/mash_burger"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:buttonTint="@android:color/holo_green_dark"
+                            android:textAlignment="center"
+                            android:letterSpacing="0.2"
+                            android:text="@string/mash_burger"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_3jd"
+                            android:layout_margin="10dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+
+
+                        <RadioButton
+                            android:id="@+id/mash_burger_meal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="28dp"
+                            android:letterSpacing="0.2"
+                            android:text="@string/meal"
+                            android:textAllCaps="true"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/_4jd"
+                            android:layout_marginTop="5dp"
+                            android:letterSpacing="0.2"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/black"
+                            android:textStyle="bold"/>
+                    </RadioGroup>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/mash_burger_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="200dp"
+                    android:text="@string/_0"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:layout_width="30dp"
+                    android:layout_height="90dp"
+                    android:background="@drawable/plus_minus_container"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_marginTop="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/mash_burger_plus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/plus" />
+
+                    <ImageView
+                        android:id="@+id/mash_burger_minus"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginVertical="4dp"
+                        android:src="@drawable/minus" />
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>
